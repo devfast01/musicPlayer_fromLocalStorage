@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryDark"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragment_playlist">
+
+
+    <!--        action bar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="20dp">
+
+        <!--        back button-->
+        <ImageView
+            android:id="@+id/imgBackPF"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_back"
+            tools:ignore="ContentDescription" />
+
+        <!--        title-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/norwester"
+            android:text="@string/playlist"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="30sp" />
+
+        <!--        search button-->
+        <ImageView
+            android:id="@+id/imgSearchPF"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_search"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--    playlist recycler view-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPlaylistPF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            tools:listitem="@layout/playlist_item" />
+
+
+        <!--        shuffle song button-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddPlaylistPF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_add"
+            app:backgroundTint="@color/colorAccentDark"
+            app:fabCustomSize="60dp"
+            app:maxImageSize="30dp"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primaryDark"
+    tools:context=".MainActivity">
+
+
+    <!--    main fragment container-->
+    <FrameLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nowPlayingContainer" />
+
+    <!--    now playing fragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nowPlayingContainer"
+        android:name="com.example.spotifyclone_example.fragments.fragment_now_playing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNav"
+        tools:layout="@layout/fragment_now_playing" />
+
+    <!--    bottom nav bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="5dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary"
+        app:itemIconSize="26dp"
+        app:itemIconTint="@color/text"
+        app:itemTextColor="@color/text"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
+
+
+</RelativeLayout>

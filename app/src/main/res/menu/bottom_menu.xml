@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/itemHome"
+        android:title="@string/home"
+        android:icon="@drawable/bottom_nav_home"/>
+
+    <item android:id="@+id/itemMusic"
+        android:title="@string/music"
+        android:icon="@drawable/bottom_nav_music"/>
+
+    <item android:id="@+id/itemFavorite"
+        android:title="@string/favorite"
+        android:icon="@drawable/bottom_nav_favorite"/>
+
+    <item android:id="@+id/itemPlaylist"
+        android:title="@string/playlist"
+        android:icon="@drawable/bottom_nav_playlist"/>
+
+
+</menu>
