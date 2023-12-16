@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "spotifyClone_example"
+rootProject.name = "musicPlayer_localStorage"
 include ':app'
